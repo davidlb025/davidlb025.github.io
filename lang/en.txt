@@ -1,0 +1,50 @@
+language_name: English
+home: Home
+about: About Me
+skills: Skills
+projects: Projects
+contact: Contact
+cv: Download CV
+hero-title: Hello, I'm <span style='color: #e74c3c'>David López</span>
+hero-subtitle: High School student passionate about creating digital solutions
+hero-button: View My Projects
+about-title: About Me
+about-subtitle: Learn more about my journey and passions
+about-heading: High School Student
+about-text1: I am a High School student passionate about technology, software development, web, AI, and technological solutions for all kinds of needs
+about-text2: My focus is on writing clean, efficient, and maintainable code, always aiming for the best possible user experience. I enjoy working in a team and tackling new challenges that allow me to keep learning and growing professionally.
+about-button: Download CV
+skills-title: My Skills
+skills-subtitle: Technologies and tools I use
+skill1-title: Frontend
+skill1-text: HTML5, CSS3, JavaScript, React, Tailwind CSS
+skill2-title: Backend
+skill2-text: Python (Flask, FastAPI, Django), Node.js (Express), PHP, SQL and NoSQL databases
+skill3-title: Software Development
+skill3-text: Python, C++, Qt Creator, OOP, API Integration
+skill4-title: Artificial Intelligence
+skill4-text: Python, Pytorch, Chatbots, LLM, AI applied to applications
+projects-title: My Projects
+projects-subtitle: Some of my recent works
+project-demo: Demo
+project-code: Code
+contact-title: Contact
+contact-subtitle: Get in touch with me
+contact-location-title: Location
+contact-location: Lleida, Spain
+contact-email-title: Email
+contact-phone-title: Phone
+contact-website-title: Website
+form-name-label: David López Borrego
+form-email-label: Email
+form-subject-label: Subject
+form-message-label: Message
+form-button: Send Message
+footer-title: Your Portfolio
+footer-description: High School student passionate about creating digital solutions
+footer-links-title: Quick Links
+footer-home: Home
+footer-about: About Me
+footer-skills: Skills
+footer-projects: Projects
+footer-contact: Contact
