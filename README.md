@@ -6,7 +6,7 @@ Mi página personal / portafolio profesional, alojada con GitHub Pages.
 
 ## 🚀 Acerca de
 
-Este sitio web es mi **portafolio personal**, donde muestro mis proyectos, habilidades y experiencia. Está pensado para servir como carta de presentación profesional y también como demostración técnica de lo que sé hacer.
+Mi **portafolio personal**, para exponer mis proyectos, habilidades y experiencia. Pensado como carta de presentación profesional.
 
 ---
 
