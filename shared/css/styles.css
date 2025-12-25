@@ -194,13 +194,15 @@ header.scrolled {
     background: white;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 120px;
+    width: 100px;
     display: none;
     z-index: 1001;
+    display: none;
+    flex-direction: column;
 }
 
 .language-options.active {
-    display: block;
+    display: flex;
 }
 
 .language-option {

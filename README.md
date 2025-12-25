@@ -26,19 +26,24 @@ Mi **portafolio personal**, para exponer mis proyectos, habilidades y experienci
 
 La estructura del repositorio es la típica para una página estática alojada con GitHub Pages:
 
-- `index.html` — Página principal  
-- `assets/css/` — Estilos  
-- `assets/js/` — Scripts  
-- `assets/img/` — Imágenes (actualmente *placeholders* en link)  
-- `projects/` — Carpeta con los ejemplos de proyectos  
-- `lang/` — Traducciones  
+- `index.html` — Página principal en español
+- `/shared/css/` — Estilos compartidos
+- `/shared/js/` — Scripts compartidos
+- `/shared/img/` — Imágenes compartidas (actualmente *placeholders* en link)  
+- `/projects/` — Carpeta con el ejemplo de proyectos en español
+- `/cat/`,`/en/` — Carpeta con cada idioma
+- `/assets/js/` — Scripts del español
 
+### (Dentro de cada idioma)
+- `/projects/` — Carpeta con el ejemplo de proyectos en ese idioma
+- `/assets/js/` — Scripts del idioma
+- `index.html` — Página en ese idioma
 ---
 
 ## ⚠️ Estado actual
 
 - Versión **preliminar** del sitio  
 - Las imágenes son **temporales (placeholders)**  
-- Falta implementar la **lógica de traducción** de los proyectos  
+- **Cambio Total** del sistema de traducción por uno con mayor CEO y simplicidad
 - No hay enlaces externos definitivos todavía  
 

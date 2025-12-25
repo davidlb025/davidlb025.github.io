@@ -13,7 +13,7 @@ async function detectAvailableProjects() {
 
     for (let i = 1; i <= maxProjectsToCheck; i++) {
         try {
-            const response = await fetch(`/projects/proyecto${i}.json`);
+            const response = await fetch(`/cat/projects/proyecto${i}.json`);
             if (response.ok) {
                 detectedProjects.push(`proyecto${i}.json`);
             }
@@ -30,7 +30,7 @@ async function loadProjects() {
 
     for (const file of files) {
         try {
-            const response = await fetch(`/projects/${file}`);
+            const response = await fetch(`/cat/projects/${file}`);
             if (response.ok) {
                 loadedProjects.push(await response.json());
             }
@@ -64,7 +64,7 @@ function renderProjects(projects) {
                         <i class="fas fa-external-link-alt"></i> Demo
                     </a>
                     <a href="${project.codeLink}" target="_blank">
-                        <i class="fab fa-github"></i> Código
+                        <i class="fab fa-github"></i> Codi
                     </a>
                 </div>
             </div>
