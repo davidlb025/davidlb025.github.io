@@ -10,7 +10,7 @@ Mi **portafolio personal**, para exponer mis proyectos, habilidades y experienci
 
 ---
 
-## 🛠 Tecnologías utilizadas
+## 🛠 Tecnologías que utilizo
 
 - **Frontend**: HTML5, CSS3, JavaScript  
 - **Backend**: Python, Node.js, PHP, Bases de datos SQL y NoSQL
