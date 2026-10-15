@@ -13,6 +13,7 @@
   <link rel="preload" href="assets/display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="memory-entry.css">
+  <link rel="stylesheet" href="toolbox-entry.css">
   <script defer src="i18n.js"></script><script defer src="app.js"></script>
   <link rel="stylesheet" href="i18n.css">
 </head>
@@ -81,12 +82,17 @@
     <section id="proyectos" class="projects chapter section-wrap" data-chapter="Mundos creados" aria-labelledby="projects-title">
       <div class="section-marker"><span>MUNDOS CREADOS</span><span class="marker-line"></span><span>ARCHIVO DE PROYECTOS</span></div>
       <div class="section-heading"><h2 id="projects-title">De la idea<br><em>a la realidad.</em></h2><div class="section-intro"><p>Cada proyecto es una puerta a algo nuevo.<br>Abre una y explora lo que hay detrás.</p><span class="sample-notice"><span class="status-dot"></span>DaLogic · Proyecto personal en el Claver</span></div></div>
-      <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filtrar proyectos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>03</span></button><button data-filter="software" aria-pressed="false">Software</button><button data-filter="creative" aria-pressed="false">Experimentos</button></div><span class="project-counter" aria-live="polite">1 proyecto real · 2 ejemplos</span></div>
+      <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filtrar proyectos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>04</span></button><button data-filter="software" aria-pressed="false">Software</button><button data-filter="tools" aria-pressed="false">Herramientas</button><button data-filter="creative" aria-pressed="false">Experimentos</button></div><span class="project-counter" aria-live="polite">1 proyecto real · 1 colección · 2 ejemplos</span></div>
       <div class="project-grid">
         <button class="project-card project-featured" data-project="dalogic" data-category="software" data-example="false" aria-label="Explorar DaLogic, proyecto personal de 2.º de Bachillerato">
           <div class="project-art art-dalogic"><div class="project-tag">PROYECTO PERSONAL · CLAVER</div><svg class="dalogic-cover" viewBox="0 0 600 260" aria-hidden="true"><path d="M45 65H230V101H290M45 195H230V159H290M390 130H550"/><path class="dalogic-gate" d="M290 75h45a55 55 0 0 1 0 110h-45Z"/><circle cx="45" cy="65" r="9"/><circle cx="45" cy="195" r="9"/><circle cx="550" cy="130" r="12"/><text x="329" y="136">AND</text></svg><span class="art-word">DaLogic</span><span class="project-open"><svg class="icon"><use href="#i-diagonal"/></svg></span></div>
           <div class="project-info"><div><h3>DaLogic</h3><p>Diseñar, simular y entender circuitos lógicos.</p></div><span>PYTHON · 2.º BACHILLERATO</span></div>
         </button>
+        <a class="project-card toolbox-entry" data-category="tools" href="/herramientas/" data-preserve-language aria-label="Abrir la Caja de Herramientas">
+          <svg class="toolbox-symbol" viewBox="0 0 64 64" aria-hidden="true"><path d="M23 20v-7h18v7M9 22h46v32H9zM9 33h46M27 30h10v8H27z"/></svg>
+          <div class="toolbox-entry-copy"><h3><em>Caja de Herramientas</em></h3><p>Pequeñas aplicaciones web para resolver cosas concretas.</p><span>Una colección en crecimiento.</span></div>
+          <span class="toolbox-entry-action">Abrir la caja <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </a>
         <button class="project-card" data-project="orbita" data-category="creative" aria-label="Explorar Órbita, experimento de ejemplo">
           <div class="project-art art-orbita"><div class="project-tag">EXPERIMENTO DE EJEMPLO</div><div class="orbit-system" aria-hidden="true"><i></i><i></i><i></i><span></span></div><span class="art-word">ÓRBITA</span><span class="project-open"><svg class="icon"><use href="#i-diagonal"/></svg></span></div>
           <div class="project-info"><div><h3>Órbita</h3><p>Movimiento, luz y un poco de gravedad.</p></div><span>CREATIVO</span></div>

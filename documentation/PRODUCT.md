@@ -37,3 +37,6 @@ Latest user correction supersedes the earlier unrelated cinematic worlds. Standa
 Voluntariados facilitados por David: curso2025–2026, ayudante en Moda re- / Troballes (Lleida Anselm Clavé); curso2026–2027, profesor de repaso en primaria en Escola Ciutat Jardí de Lleida. Nombres verificados en las webs oficiales y enlazados en la trayectoria. El B2 conserva toda su información dentro de un marco rectangular completo.
 
 Language support: the shared CA / ES / EN selector translates both index.html and recuerdos.html, including project details, filters, live controls, accessibility labels and document metadata. Selection is saved locally when storage is available and carried through cross-page links with ?lang=ca, ?lang=es or ?lang=en. The cinematic visual identity and project names remain intact. Translation source keys and both target languages are maintained in i18n.js.
+
+
+Caja de Herramientas: collection of small static web applications, separate from personal projects. Its independent repository is https://github.com/davidlb025/herramientas, served at /herramientas/. The initial tool already present is Taller de Estática at estatica_maquinas/. The portfolio links directly to the hub and counts it as a collection. Language is retained across that link.

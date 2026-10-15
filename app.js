@@ -101,9 +101,10 @@
     updateProjectCount();
   }));
   function updateProjectCount() {
-    const real = projectCards.filter(card => !card.hidden && card.dataset.example === 'false').length;
-    const examples = projectCards.filter(card => !card.hidden && card.dataset.example !== 'false').length;
-    $('.project-counter').textContent = [real ? t(real === 1 ? '{count} proyecto real' : '{count} proyectos reales', {count: real}) : '', examples ? t(examples === 1 ? '{count} ejemplo' : '{count} ejemplos', {count: examples}) : ''].filter(Boolean).join(' · ');
+    const real = projectCards.filter(card => !card.hidden && card.dataset.project && card.dataset.example === 'false').length;
+    const collections = projectCards.filter(card => !card.hidden && card.dataset.category === 'tools').length;
+    const examples = projectCards.filter(card => !card.hidden && card.dataset.project && card.dataset.example !== 'false').length;
+    $('.project-counter').textContent = [real ? t(real === 1 ? '{count} proyecto real' : '{count} proyectos reales', {count: real}) : '', collections ? t(collections === 1 ? '{count} colección' : '{count} colecciones', {count: collections}) : '', examples ? t(examples === 1 ? '{count} ejemplo' : '{count} ejemplos', {count: examples}) : ''].filter(Boolean).join(' · ');
   }
 
 
@@ -287,7 +288,7 @@
     projectContext.setTransform(dpr, 0, 0, dpr, 0, 0);
     renderProject(performance.now());
   }
-  projectCards.forEach(card => card.addEventListener('click', () => {
+  projectCards.filter(card => card.dataset.project).forEach(card => card.addEventListener('click', () => {
     currentProject = card.dataset.project;
     dialogOpener = card;
     updateProjectCopy();

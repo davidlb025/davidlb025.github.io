@@ -1,6 +1,16 @@
 (() => {
   'use strict';
   const messages = {
+  "Herramientas": ["Eines", "Tools"],
+  "Abrir la Caja de Herramientas": ["Obre la Caixa d’Eines", "Open the Toolbox"],
+  "Caja de": ["Caixa d’", "Tool"],
+  "Pequeñas aplicaciones web para resolver cosas concretas.": ["Petites aplicacions web per resoldre coses concretes.", "Small web apps for specific tasks."],
+  "Una colección en crecimiento.": ["Una col·lecció que va creixent.", "A growing collection."],
+  "Abrir la caja": ["Obre la caixa", "Open the toolbox"],
+  "{count} colección": ["{count} col·lecció", "{count} collection"],
+  "{count} colecciones": ["{count} col·leccions", "{count} collections"],
+  "1 proyecto real · 1 colección · 2 ejemplos": ["1 projecte real · 1 col·lecció · 2 exemples", "1 real project · 1 collection · 2 examples"],
+  "Caja de Herramientas": ["Caixa d’Eines", "Toolbox"],
   "El universo creativo de David López Borrego. Proyectos, historia y nuevos caminos en un portafolio cinematográfico.": [
     "L'univers creatiu de David López Borrego. Projectes, història i nous camins en un portafolis cinematogràfic.",
     "The creative universe of David López Borrego. Projects, stories and new paths in a cinematic portfolio."
@@ -1056,10 +1066,10 @@
     // Keep the language when crossing pages even when storage is unavailable.
     document.querySelectorAll('a[href]').forEach(link => {
       const raw = link.getAttribute('href');
-      if (/^(?:\.\/)?(?:index|recuerdos)\.html(?:[?#]|$)/.test(raw)) {
+      if (link.hasAttribute('data-preserve-language') || /^(?:\.\/)?(?:index|recuerdos)\.html(?:[?#]|$)/.test(raw)) {
         const url = new URL(link.href);
         url.searchParams.set('lang', language);
-        link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+        link.setAttribute('href', (link.hasAttribute('data-preserve-language') ? url.pathname : url.pathname.split('/').pop()) + url.search + url.hash);
       }
     });
     document.dispatchEvent(new CustomEvent('portfolio-language', { detail: { language } }));

@@ -1,0 +1,12 @@
+/* Collection entrance inherits the portfolio's typography, palette and focus ring. */
+.toolbox-entry{grid-column:1/-1;display:flex;align-items:center;gap:32px;padding:34px 32px;border-block:1px solid var(--line);background:#1b2018;transition:background .2s var(--ease)}
+.toolbox-entry:hover{background:#242a1e}
+.toolbox-symbol{width:64px;height:64px;flex:none;fill:none;stroke:var(--accent);stroke-width:1.4;stroke-linejoin:round}
+.toolbox-entry h3{font-size:clamp(24px,2.8vw,38px);letter-spacing:-.03em;line-height:1.15}
+.toolbox-entry-copy p{font-size:13px;margin-top:12px}
+.toolbox-entry-copy>span{display:block;font-size:11px;color:var(--dim);margin-top:5px}
+.toolbox-entry-action{display:flex;align-items:center;gap:18px;font-size:12px;margin-left:auto;white-space:nowrap}
+.toolbox-entry-action .icon{color:var(--accent);transition:transform .2s var(--ease)}
+.toolbox-entry:hover .toolbox-entry-action .icon{transform:translateX(4px)}
+@media(max-width:640px){.project-filters{gap:15px;flex-wrap:wrap}.toolbox-entry{flex-wrap:wrap;gap:20px;padding:26px 22px}.toolbox-symbol{width:44px;height:44px}.toolbox-entry-copy{flex:1;min-width:170px}.toolbox-entry-copy p{font-size:12px}.toolbox-entry-action{margin-left:64px}.toolbox-entry h3{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.toolbox-entry,.toolbox-entry-action .icon{transition:none}}
