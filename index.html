@@ -1,258 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David López - Portfolio Personal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/shared/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="El universo creativo de David López Borrego. Proyectos, historia y nuevos caminos en un portafolio cinematográfico.">
+  <meta property="og:title" content="David López Borrego — Un universo por crear">
+  <meta property="og:description" content="Explora mi historia, mis proyectos y el próximo capítulo.">
+  <title>David López Borrego — Un universo por crear</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/umbral-world-v2.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="assets/display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="memory-entry.css">
+  <script defer src="i18n.js"></script><script defer src="app.js"></script>
+  <link rel="stylesheet" href="i18n.css">
 </head>
 <body>
-    <!-- Header y Navegación -->
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">David <span>López</span></a>
-                <ul class="nav-links">
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#" class="cv-link" id="cv-link">Descargar CV</a></li>
-                    <li class="language-selector">
-                        <button class="language-btn">
-                            <i class="fas fa-globe"></i>
-                            <span>ES</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="language-options">
-                            <a href="/" class="language-option">Español</a>
-                            <a href="/en/" class="language-option">English</a>
-                            <a href="/cat/" class="language-option">Català</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <svg class="svg-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5ZM15 8a6 6 0 0 1 0 8M18 4a11 11 0 0 1 0 16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 3a15 15 0 0 0 5 5l3-3 5 3c-1 5-4 6-8 4S4 14 3 9 4 3 8 3Z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 5 7 7-7 7"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 11a8 8 0 1 1 2 7M4 4v7h7"/></symbol>
+  </defs></svg>
 
-    <!-- Sección Hero -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 id="hero-title">Hola, soy <span style="color: var(--accent-color)">David López</span></h1>
-                <p id="hero-subtitle">Estudiante de Bachillerato apasionado por crear soluciones digitales</p>
-                <a href="#projects" class="btn" id="hero-button">Ver Mis Proyectos</a>
-            </div>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
+  <div class="world" aria-hidden="true"><div class="world-image"></div><div class="world-shade"></div><canvas id="atmosphere"></canvas></div>
+  <div class="frame-top" aria-hidden="true"></div><div class="frame-bottom" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-    <!-- Sección Sobre Mí -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2 id="about-title">Sobre Mí</h2>
-                <p id="about-subtitle">Conoce más sobre mi trayectoria y pasiones</p>
-            </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <!--Imagen Ejemplo-->
-                    <img src="https://i.ibb.co/Ldh6rb5S/photo-1507003211169-0a1dd7228f2d-ixlib-rb-4.png" alt="Mi foto">
-                </div>
-                <div class="about-text">
-                    <h3 id="about-heading">Estudiante de Bachillerato</h3>
-                    <p id="about-text1">Soy un estudiante de Bachillerato apasionado por la tecnologia, el desarollo de software, web, IA y soluciones tecnológicas para todo tipo de necesidades</p>
-                    <p id="about-text2">Mi enfoque se centra en escribir código limpio, eficiente y mantenible, siempre buscando la mejor experiencia de usuario posible. Disfruto trabajando en equipo y enfrentando nuevos desafíos que me permitan seguir aprendiendo y creciendo profesionalmente.</p>
-                    <a href="#" class="btn" id="about-button">Descargar CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Habilidades -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2 id="skills-title">Mis Habilidades</h2>
-                <p id="skills-subtitle">Tecnologías y herramientas que utilizo</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill-card" id ="skill1">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3 id="skill1-title">Frontend</h3>
-                    <p id="skill1-text">HTML5, CSS3, JavaScript, React, Tailwind CSS</p>
-                </div>
-                <div class="skill-card" id="skill2">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3 id="skill2-title">Backend</h3>
-                    <p id="skill2-text"> Python (Flask, FastAPI, Django), Node.js (Express), PHP, Bases de datos SQL y NoSQL</p>
-                </div>
-                <div class="skill-card" id="skill3">
-                    <div class="skill-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 id="skill3-title">Desarrollo de Software</h3>
-                    <p id="skill3-text">Python, C++, Qt Creator, POO, Integración de APIs</p>
-                </div>
-                <div class="skill-card" id="skill4">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 id="skill4-title">Inteligencia Artificial</h3>
-                    <p id="skill4-text">Python, Pytorch, Chatbots, LLM, IA aplicada a aplicaciones</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Proyectos -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2 id="projects-title">Mis Proyectos</h2>
-                <p id="projects-subtitle">Algunos de mis trabajos recientes</p>
-            </div>
-            <div class="projects-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-track" id="carousel-track">
-                        <!-- Los proyectos se cargarán aquí -->
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <button class="carousel-btn" id="prev-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-btn" id="next-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-                <div class="carousel-dots" id="carousel-dots">
-                    <!-- Los puntos se generancon JavaScript -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2 id="contact-title">Contacto</h2>
-                <p id="contact-subtitle">Ponte en contacto conmigo</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 id="contact-location-title">Ubicación</h3>
-                            <p id="contact-location">Ciudad, País</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 id="contact-email-title">Email</h3>
-                            <p id="contact-email">davidlopezborrego025@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 id="contact-phone-title">Teléfono</h3>
-                            <p id="contact-phone">+34 683 371 901</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 id="contact-website-title">Website</h3>
-                            <p id="contact-website">davidlb025.github.io</p>
-                        </div>
-                    </div>
-                </div>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Asunto</label>
-                        <input type="text" id="subject" name="subject" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" class="form-control" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3 id="footer-title">Tu Portfolio</h3>
-                    <p id="footer-description">Desarrollador apasionado por crear soluciones digitales innovadoras.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/davidlb025/"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3 id="footer-links-title">Enlaces Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home" id="footer-home">Inicio</a></li>
-                        <li><a href="#about" id="footer-about">Sobre Mí</a></li>
-                        <li><a href="#skills" id="footer-skills">Habilidades</a></li>
-                        <li><a href="#projects" id="footer-projects">Proyectos</a></li>
-                        <li><a href="#contact" id="footer-contact">Contacto</a></li>
-                        <li><a href="#" id="footer-cv">CV</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-            </div>
-        </div>
-    </footer>
-<div id="popup" class="popup hidden">
-    <div class="popup-card">
-        <h3 id="popup-title">Título</h3>
-        <p id="popup-message">Mensaje del popup</p>
-        <button id="popup-btn" class="btn">Aceptar</button>
+  <header class="site-header">
+    <a class="identity" href="#inicio" aria-label="David López Borrego, inicio">
+      <svg class="monogram" viewBox="0 0 40 44" aria-hidden="true"><path d="M5 36V8h10c12 0 18 5 18 14S27 36 15 36H5Z"/><path d="M13 28V16h4c5 0 8 2 8 6s-3 6-8 6h-4Z"/></svg>
+      <span>DAVID LÓPEZ BORREGO<small>PORTAFOLIO PERSONAL</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal"><a href="#origen">Mi historia</a><a href="#proyectos">Proyectos</a><a href="#experimental" class="experimental-link">Recuerdos</a><a href="#trayectoria">Trayectoria</a><a href="#certificados">Certificados</a></nav>
+    <div class="header-actions">
+      <button class="sound-toggle" aria-label="Activar sonido ambiental" aria-pressed="false"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="sound-label">SONIDO OFF</span></button>
+      <a class="contact-nav" href="#contacto">Hablemos <svg class="icon"><use href="#i-diagonal"/></svg></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button>
     </div>
-</div>
-    <script src="/shared/js/script.js"></script>
-    <script src="assets/js/script.js"></script>
+  </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Navegación móvil" hidden><a href="#inicio">Inicio</a><a href="#origen">Mi historia</a><a href="#proyectos">Proyectos</a><a href="#experimental">Recuerdos</a><a href="#trayectoria">Trayectoria</a><a href="#certificados">Certificados</a><a href="#contacto">Contacto</a></nav>
+
+  <main id="main">
+    <section id="inicio" class="hero chapter" data-chapter="Prólogo" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Un universo<br>por <em>crear.</em></h1>
+        <p class="hero-description">Soy David. Esta es mi historia,<br>lo que construyo y todo lo que está por venir.</p>
+        <a class="primary-button" href="#origen"><span>Entrar en mi universo</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+        <span class="hero-note">Una historia que acaba de empezar.</span>
+      </div>
+      <div class="scene-caption" aria-hidden="true"><span class="crosshair"></span><span>EL SIGUIENTE CAPÍTULO<br><b>ESTÁ AL OTRO LADO.</b></span></div>
+      <div class="hero-footer"><a href="#origen" class="scroll-cue"><span class="mouse"><i></i></span>DESLIZA PARA EXPLORAR</a><span class="edition">DAVID LÓPEZ BORREGO <span>© 2026</span></span><button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="Pausar efectos de movimiento"><svg class="icon"><use href="#i-pause"/></svg><span>PAUSAR ATMÓSFERA</span></button></div>
+    </section>
+
+    <section id="origen" class="origin chapter section-wrap" data-chapter="El origen" aria-labelledby="origin-title">
+      <div class="section-marker"><span>EL ORIGEN</span><span class="marker-line"></span><span>MI HISTORIA</span></div>
+      <div class="origin-layout">
+        <div class="origin-statement"><h2 id="origin-title">Todavía estoy<br>escribiendo<br><em>mi historia.</em></h2><p class="large-copy">Y me gusta que sea así.</p></div>
+        <div class="origin-story">
+          <p>Me llamo <strong>David López Borrego</strong>. Estoy cursando 2.º de Bachillerato en el Colegio Claver de Lleida.</p>
+          <p>Este es el lugar donde iré compartiendo mis proyectos, los caminos que elija y lo que aprenda por el camino.</p>
+          <p>De momento, puedes explorar esta primera versión de mi universo. Quedan muchos capítulos por descubrir.</p>
+          <dl class="profile-facts"><div><dt>AHORA</dt><dd>2.º de Bachillerato</dd></div><div><dt>CENTRO</dt><dd>Colegio Claver de Lleida</dd></div><div><dt>EL PRÓXIMO PASO</dt><dd>Por escribir <span class="status-dot"></span></dd></div></dl>
+          <a href="#trayectoria" class="text-link">Explorar mi trayectoria<svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="origin-watermark" aria-hidden="true">DAVID.</div>
+    </section>
+
+    <section id="proyectos" class="projects chapter section-wrap" data-chapter="Mundos creados" aria-labelledby="projects-title">
+      <div class="section-marker"><span>MUNDOS CREADOS</span><span class="marker-line"></span><span>ARCHIVO DE PROYECTOS</span></div>
+      <div class="section-heading"><h2 id="projects-title">De la idea<br><em>a la realidad.</em></h2><div class="section-intro"><p>Cada proyecto es una puerta a algo nuevo.<br>Abre una y explora lo que hay detrás.</p><span class="sample-notice"><span class="status-dot"></span>DaLogic · Proyecto personal en el Claver</span></div></div>
+      <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filtrar proyectos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>03</span></button><button data-filter="software" aria-pressed="false">Software</button><button data-filter="creative" aria-pressed="false">Experimentos</button></div><span class="project-counter" aria-live="polite">1 proyecto real · 2 ejemplos</span></div>
+      <div class="project-grid">
+        <button class="project-card project-featured" data-project="dalogic" data-category="software" data-example="false" aria-label="Explorar DaLogic, proyecto personal de 2.º de Bachillerato">
+          <div class="project-art art-dalogic"><div class="project-tag">PROYECTO PERSONAL · CLAVER</div><svg class="dalogic-cover" viewBox="0 0 600 260" aria-hidden="true"><path d="M45 65H230V101H290M45 195H230V159H290M390 130H550"/><path class="dalogic-gate" d="M290 75h45a55 55 0 0 1 0 110h-45Z"/><circle cx="45" cy="65" r="9"/><circle cx="45" cy="195" r="9"/><circle cx="550" cy="130" r="12"/><text x="329" y="136">AND</text></svg><span class="art-word">DaLogic</span><span class="project-open"><svg class="icon"><use href="#i-diagonal"/></svg></span></div>
+          <div class="project-info"><div><h3>DaLogic</h3><p>Diseñar, simular y entender circuitos lógicos.</p></div><span>PYTHON · 2.º BACHILLERATO</span></div>
+        </button>
+        <button class="project-card" data-project="orbita" data-category="creative" aria-label="Explorar Órbita, experimento de ejemplo">
+          <div class="project-art art-orbita"><div class="project-tag">EXPERIMENTO DE EJEMPLO</div><div class="orbit-system" aria-hidden="true"><i></i><i></i><i></i><span></span></div><span class="art-word">ÓRBITA</span><span class="project-open"><svg class="icon"><use href="#i-diagonal"/></svg></span></div>
+          <div class="project-info"><div><h3>Órbita</h3><p>Movimiento, luz y un poco de gravedad.</p></div><span>CREATIVO</span></div>
+        </button>
+        <button class="project-card" data-project="nexo" data-category="creative" aria-label="Explorar Nexo, experimento de ejemplo">
+          <div class="project-art art-nexo"><div class="project-tag">EXPERIMENTO DE EJEMPLO</div><div class="nexo-system" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="art-word">NEXO</span><span class="project-open"><svg class="icon"><use href="#i-diagonal"/></svg></span></div>
+          <div class="project-info"><div><h3>Nexo</h3><p>Conexiones que dibujan nuevas formas.</p></div><span>INTERACTIVO</span></div>
+        </button>
+      </div>
+      <p class="projects-footnote">DaLogic es un proyecto personal de 2.º de Bachillerato. Órbita y Nexo son experimentos de ejemplo.</p>
+    </section>
+
+    <section id="experimental" class="memory-entrance chapter section-wrap" data-chapter="Los recuerdos" aria-labelledby="experimental-title">
+      <div class="memory-entrance-heading"><h2 id="experimental-title">Un portal<br><em>a los recuerdos.</em></h2><p>Un lugar. Los años que me han traído hasta aquí.<br>Un recorrido por el Claver, desde niño hasta Bachillerato.</p></div>
+      <a class="memory-entrance-film" href="recuerdos.html" aria-label="Entrar en el recorrido independiente de recuerdos del Claver"><div class="entrance-film-shade"></div><div class="entrance-film-copy"><span class="entrance-place">COLEGIO CLAVER · LLEIDA</span><h3>El lugar<br>donde crecí.</h3><span class="entrance-action">Entrar en los recuerdos <svg class="icon"><use href="#i-arrow"/></svg></span></div><span class="entrance-film-note">INFANCIA → BACHILLERATO</span></a>
+      <p class="memory-entrance-footnote">Una experiencia propia. Avanza por el camino y descubre los proyectos en el momento en que nacieron.</p>
+    </section>
+
+    <section id="trayectoria" class="journey chapter section-wrap" data-chapter="El camino" aria-labelledby="journey-title">
+      <div class="section-marker"><span>EL CAMINO</span><span class="marker-line"></span><span>FORMACIÓN Y EXPERIENCIA</span></div>
+      <div class="journey-layout"><div><h2 id="journey-title">Nada se crea<br><em>de la nada.</em></h2><p class="journey-intro">Cada etapa deja algo.<br>Este es mi punto de partida.</p><div class="journey-tabs" role="tablist" aria-label="Trayectoria"><button id="tab-study" role="tab" aria-selected="true" aria-controls="panel-study" tabindex="0">Estudios</button><button id="tab-work" role="tab" aria-selected="false" aria-controls="panel-work" tabindex="-1">Trabajo</button><button id="tab-volunteer" role="tab" aria-selected="false" aria-controls="panel-volunteer" tabindex="-1">Voluntariado</button></div></div>
+      <div class="journey-detail"><div id="panel-study" role="tabpanel" aria-labelledby="tab-study"><div class="timeline-item"><div class="timeline-node" aria-hidden="true"></div><div class="timeline-state"><span class="status-dot"></span>ETAPA ACTUAL</div><h3>2.º de<br>Bachillerato</h3><p class="institution">Colegio Claver de Lleida</p><p class="timeline-description">Una etapa de formación y decisiones. Preparando el terreno para lo que venga después.</p><div class="timeline-meta"><span>FORMACIÓN ACADÉMICA</span><span>EN CURSO</span></div></div><div class="next-chapter"><span class="next-node" aria-hidden="true"></span><p>La siguiente etapa<small>El camino sigue abierto.</small></p><svg class="icon"><use href="#i-arrow"/></svg></div></div>
+      <div id="panel-work" role="tabpanel" aria-labelledby="tab-work" hidden><div class="timeline-item work-empty"><div class="timeline-node" aria-hidden="true"></div><span class="timeline-state">EXPERIENCIA LABORAL</span><h3>Experiencia<br>por incorporar.</h3><p class="timeline-description">Todavía no he añadido experiencia laboral a este portafolio.</p></div></div><div id="panel-volunteer" role="tabpanel" aria-labelledby="tab-volunteer" hidden><div class="volunteer-timeline">
+        <article class="timeline-item volunteer-item"><div class="timeline-node" aria-hidden="true"></div><span class="timeline-state">CURSO 2025–2026 · VOLUNTARIADO</span><h3>Ayudante<br>en Moda re-</h3><p class="institution"><a href="https://modare.org/tiendas-ropa-segunda-mano/lleida/" target="_blank" rel="noopener noreferrer">Troballes · Lleida Anselm Clavé<svg class="icon"><use href="#i-diagonal"/></svg></a></p><p class="timeline-description">Voluntariado como ayudante en la tienda de Moda re- de Troballes, en el carrer de l’Anselm Clavé de Lleida.</p></article>
+        <article class="timeline-item volunteer-item"><div class="timeline-node" aria-hidden="true"></div><span class="timeline-state">CURSO 2026–2027 · VOLUNTARIADO</span><h3>Profesor de repaso<br>en primaria</h3><p class="institution"><a href="https://agora.xtec.cat/escolaciutatjardi/" target="_blank" rel="noopener noreferrer">Escola Ciutat Jardí · Lleida<svg class="icon"><use href="#i-diagonal"/></svg></a></p><p class="timeline-description">Apoyo escolar y clases de repaso para alumnado de educación primaria.</p></article>
+      </div></div></div></div>
+    </section>
+
+    <section id="certificados" class="credentials section-wrap" aria-labelledby="credentials-title">
+      <div class="credentials-heading"><h2 id="credentials-title">Lo aprendido<br><em>deja huella.</em></h2><p>Un espacio para mis certificados,<br>cursos y acreditaciones.</p></div>
+      <div class="credential-record"><span class="credential-level">B2</span><div><h3>Inglés</h3><p>Certificado de nivel B2 en inglés.</p></div><div class="credential-classification"><span>IDIOMAS</span><span class="credential-status">NIVEL B2</span></div></div>
+    </section>
+
+    <section id="contacto" class="contact chapter section-wrap" data-chapter="El siguiente capítulo" aria-labelledby="contact-title">
+      <div class="contact-topline"><span class="status-dot"></span>LAS BUENAS HISTORIAS EMPIEZAN CON UN HOLA.</div>
+      <h2 id="contact-title">¿Creamos el<br><em>siguiente capítulo?</em></h2>
+      <a class="contact-email" href="mailto:davidlopezborrego025@gmail.com"><span>davidlopezborrego025@gmail.com</span><svg class="icon"><use href="#i-diagonal"/></svg></a>
+      <div class="contact-bottom"><a class="phone-link" href="tel:+34683371901"><svg class="icon"><use href="#i-phone"/></svg>+34 683 371 901</a><button class="copy-email text-link">Copiar email<svg class="icon"><use href="#i-arrow"/></svg></button><span>ESTUDIANDO EN LLEIDA</span></div>
+      <footer class="site-footer"><a href="#inicio" class="footer-name">DAVID LÓPEZ BORREGO <span>© 2026</span></a><span>LA HISTORIA CONTINÚA.</span><a class="back-top" href="#inicio">Volver al inicio <svg class="icon"><use href="#i-arrow"/></svg></a></footer>
+    </section>
+  </main>
+
+  <nav class="chapter-nav" aria-label="Capítulos del portafolio"><a href="#inicio" class="active" aria-current="location"><span class="chapter-index">00</span><span class="chapter-name">Prólogo</span></a><a href="#origen"><span class="chapter-index">01</span><span class="chapter-name">El origen</span></a><a href="#proyectos"><span class="chapter-index">02</span><span class="chapter-name">Mundos creados</span></a><a href="#experimental"><span class="chapter-index">03</span><span class="chapter-name">Los recuerdos</span></a><a href="#trayectoria"><span class="chapter-index">04</span><span class="chapter-name">El camino</span></a><a href="#contacto"><span class="chapter-index">05</span><span class="chapter-name">Conectar</span></a></nav>
+  <div class="chapter-readout" aria-hidden="true"><span id="chapter-number">00</span><i>/</i><span>05</span></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Cerrar proyecto"><svg class="icon"><use href="#i-close"/></svg></button><div class="dialog-visual"><canvas id="project-canvas" aria-label="Experimento visual interactivo"></canvas><div class="dialog-visual-title" aria-hidden="true"></div></div><div class="dialog-content"><span class="dialog-demo">PROYECTO DE EJEMPLO · NO ES UN REPOSITORIO DE DAVID</span><h2 id="dialog-title"></h2><p class="dialog-description"></p><div class="dialog-tags"></div><div class="dialog-bottom"><p>Los proyectos reales de GitHub llegarán aquí.</p><a class="dialog-repository text-link" href="https://github.com/davidlb025/DaLogic" target="_blank" rel="noopener noreferrer" hidden>Ver DaLogic en GitHub<svg class="icon"><use href="#i-diagonal"/></svg></a><button class="dialog-return text-link">Seguir explorando<svg class="icon"><use href="#i-arrow"/></svg></button></div></div></dialog>
+  <noscript><div class="noscript">Puedes recorrer todas las secciones y contactar conmigo. Activa JavaScript para explorar los proyectos interactivos.</div></noscript>
 </body>
 </html>
