@@ -1,6 +1,8 @@
 (() => {
   'use strict';
   const messages = {
+  "También disponible en una versión light.": ["També disponible en una versió light.", "Also available in a light version."],
+  "Abrir DaLogic light": ["Obre DaLogic light", "Open DaLogic light"],
   "Herramientas": ["Eines", "Tools"],
   "Abrir la Caja de Herramientas": ["Obre la Caixa d’Eines", "Open the Toolbox"],
   "Caja de": ["Caixa d’", "Tool"],

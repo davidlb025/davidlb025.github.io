@@ -303,6 +303,7 @@
     $('.dialog-description').textContent = t(project.description);
     $('.dialog-demo').textContent = t(project.example === false ? 'PROYECTO PERSONAL · COLEGIO CLAVER · 2.º BACHILLERATO' : 'EXPERIMENTO DE EJEMPLO');
     $('.dialog-repository').hidden = project.example !== false;
+    $('.dialog-light').hidden = currentProject !== 'dalogic';
     $('.dialog-bottom > p').textContent = t(project.example === false ? 'Un proyecto durante mi etapa en el Claver.' : 'Experimento de ejemplo del portafolio.');
     $('.dialog-tags').replaceChildren(...project.tags.map(tag => {
       const element = document.createElement('span'); element.textContent = t(tag); return element;
