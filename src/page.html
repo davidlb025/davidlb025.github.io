@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="es" data-theme="noche">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080e28">
+  <meta name="description" content="Portfolio de David López Borrego.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <title>David López Borrego</title>
+  <style>/* STYLES */</style>
+</head>
+<body>
+  <a class="skip-content" href="#origen">Saltar al contenido</a>
+  <!-- TEXT-NAVIGATION -->
+  <!-- visual-only:start -->
+  <div class="accessibility">
+    <button class="accessibility-toggle" type="button" aria-label="Opciones de accesibilidad"
+            aria-expanded="false" aria-controls="accessibility-panel" title="Accesibilidad" hidden>
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="4.5" r="1.8"/>
+        <path d="M4.2 8.5c2.8.9 5.4 1.2 7.8 1.2s5-.3 7.8-1.2M12 10v4m0 0-3.4 6m3.4-6 3.4 6"/>
+      </svg>
+    </button>
+    <section class="accessibility-panel" id="accessibility-panel" aria-labelledby="accessibility-title" hidden>
+      <div class="accessibility-heading">
+        <h2 class="accessibility-title" id="accessibility-title">Accesibilidad</h2>
+        <button class="accessibility-close" type="button" aria-label="Cerrar opciones de accesibilidad">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false">
+            <path d="m6 6 12 12M18 6 6 18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="accessibility-type">
+        <div class="accessibility-type-heading">
+          <p id="accessibility-size-label">Tamaño de letra</p>
+          <button class="accessibility-reset" type="button" aria-label="Restablecer tamaño de letra">Restablecer</button>
+        </div>
+        <div class="accessibility-size" role="group" aria-labelledby="accessibility-size-label">
+          <button class="accessibility-smaller" type="button" aria-label="Reducir el tamaño de la letra">A−</button>
+          <output class="accessibility-value" aria-live="polite" aria-atomic="true">100 %</output>
+          <button class="accessibility-larger" type="button" aria-label="Aumentar el tamaño de la letra">A+</button>
+        </div>
+      </div>
+      <div class="accessibility-actions">
+        <a class="accessibility-view" href="ACCESSIBILITY_VIEW_URL" aria-label="ACCESSIBILITY_VIEW_NAME" data-keep-section>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>ACCESSIBILITY_VIEW_LABEL</span>
+          <span class="accessibility-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="accessibility-view" href="PRERENDER_VIEW_URL" aria-label="PRERENDER_VIEW_NAME" data-keep-section>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m10 9 5 3-5 3Z"/>
+          </svg>
+          <span>PRERENDER_VIEW_LABEL</span>
+          <span class="accessibility-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="accessibility-view" href="./texto.html" aria-label="Versión de solo texto" data-keep-section>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+            <path d="M5 6h14M5 10h14M5 14h14M5 18h9"/>
+          </svg>
+          <span>Solo texto</span>
+          <span class="accessibility-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+  <header class="controls">
+        <button class="theme" type="button" aria-label="Cambiar a modo día">
+          <svg class="theme__day" width="19" height="19" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.8" fill="currentColor" stroke="none"/>
+            <path d="M12 2.5v2m0 15v2m9.5-9.5h-2m-15 0h-2m16.2-6.7-1.4 1.4M6.7 17.3l-1.4 1.4m13.4 0-1.4-1.4M6.7 6.7 5.3 5.3"/>
+          </svg>
+          <svg class="theme__night" width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20.9 15.2A8.7 8.7 0 0 1 8.8 3.1 9.1 9.1 0 1 0 20.9 15.2Z"/>
+          </svg>
+        </button>
+        <button class="skip-intro" type="button" aria-label="Saltar intro" aria-description="Reproduce automáticamente el recorrido restante" title="Ver el recorrido seguido">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m7 6 6 6-6 6m10-12v12"/>
+          </svg>
+        </button>
+        <!-- console-launch:start -->
+        <a class="console-launch" href="./consola.html" aria-label="Abrir consola" title="Consola">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m7.5 9 3 3-3 3m6 0h3"/>
+          </svg>
+        </a>
+        <!-- console-launch:end -->
+  </header>
+  <!-- CONTRAST-BANNER -->
+  <!-- visual-only:end -->
+
+  <main>
+    <div class="sequence" id="inicio">
+    <div class="stage">
+      <!-- visual-only:start -->
+      <canvas class="world" aria-hidden="true"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="portal-light" aria-hidden="true"></div>
+
+      <button class="orb-target" type="button" aria-label="Activar la esfera y entrar al portfolio" hidden></button>
+      <!-- visual-only:end -->
+
+      <section class="identity" aria-labelledby="nombre">
+        <div class="identity__orbit" aria-hidden="true"></div>
+        <div class="identity__content">
+          <h1 id="nombre" tabindex="-1">David <span>López Borrego</span></h1>
+          <a class="profile" href="https://www.linkedin.com/in/davidlb025/" data-console-link="linkedin" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 18 18 6M8 6h10v10"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- visual-only:start -->
+      <a class="content-down" href="#origen" aria-label="Bajar al contenido">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg>
+      </a>
+      <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+      <!-- visual-only:end -->
+    </div>
+    </div>
+
+    <nav class="portfolio-nav" aria-label="Apartados del portfolio">
+      <ul>
+        <li><a href="#origen"><span>Mi historia</span></a></li>
+        <li><a href="#proyectos"><span>Proyectos</span></a></li>
+        <li><a href="#trayectoria"><span>Trayectoria</span></a></li>
+        <li><a href="#certificados"><span>Certificados</span></a></li>
+        <li><a href="#contacto"><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="portfolio-content">
+      <!-- visual-only:start -->
+      <div class="portfolio-atmosphere" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+          <g class="atmosphere-stars" fill="currentColor">
+            <circle cx="79" cy="179" r="1.8"/><circle cx="217" cy="113" r="1"/><circle cx="279" cy="324" r="1.5"/>
+            <circle cx="384" cy="54" r="1"/><circle cx="594" cy="131" r="1.9"/><circle cx="612" cy="346" r="1"/>
+            <circle cx="743" cy="197" r="1.4"/><circle cx="823" cy="94" r="1"/><circle cx="998" cy="244" r="1.8"/>
+            <circle cx="1100" cy="155" r="1.2"/><circle cx="1268" cy="47" r="1.6"/><circle cx="1386" cy="360" r="1.8"/>
+            <circle cx="152" cy="508" r="1"/><circle cx="376" cy="584" r="1.3"/><circle cx="1232" cy="551" r="1.3"/>
+          </g>
+          <g class="atmosphere-facets" fill="none" stroke="currentColor">
+            <path d="M0 584 118 457l95 188-98 152L0 861m0-277 108 62 105-1M118 457l-10 189 7 151m-7-151L0 861"/>
+            <path d="m1282 793 67-217 91 95m-158 122 158 35m-91-252 38 184 53 68m-158-35 105-33 53-89"/>
+            <path d="m1130 350 34-58 62 41-49 42zm34-58 13 83m-47-25 96-17M264 255l39-61 23 54-31 38zm39-61-8 92"/>
+          </g>
+        </svg>
+      </div>
+      <!-- visual-only:end -->
+      <section class="chapter story" id="origen" aria-labelledby="story-title" tabindex="-1">
+        <div class="chapter-inner story-layout">
+          <div class="story-head">
+            <h2 id="story-title" class="chapter-title" tabindex="-1" data-reveal>Mi historia</h2>
+            <p class="story-lead" data-reveal>Todavía estoy escribiendo mi historia. <em>Y me gusta que sea así.</em></p>
+          </div>
+          <!-- visual-only:start -->
+          <figure class="story-map" aria-hidden="true">
+            <svg viewBox="0 0 560 520" fill="none">
+              <path class="map-grid" d="M40 40H520V480H40zM40 260H520M280 40V480M120 40v440m80-440v440m160-440v440m80-440v440M40 113h480M40 187h480M40 333h480M40 407h480"/>
+              <path class="map-cross" d="M40 50V40h10m460 0h10v10m0 420v10h-10m-460 0H40v-10"/>
+              <g class="map-terrain">
+                <path d="M334.2 256C334.6 258.2 334.6 261.2 333.2 263.2C331.8 265.2 328.3 266.9 325.7 268.1C323.2 269.4 320.4 270.1 317.9 270.6C315.4 271.1 312.9 271.2 310.7 271.1C308.4 271 306.8 270 304.5 270C302.3 269.9 299.6 270.8 297 270.6C294.4 270.5 290.7 270.2 288.8 268.9C286.9 267.6 286.2 265 285.7 262.8C285.2 260.7 285.1 258.2 285.8 256C286.5 253.8 288 251.4 289.7 249.7C291.5 248 294.5 247 296.5 245.6C298.6 244.2 300 242.6 302.1 241.4C304.2 240.1 306.8 238.5 309.2 238.2C311.6 237.9 314.2 238.8 316.5 239.4C318.8 239.9 321 240.4 323 241.4C325 242.3 327 243.4 328.3 244.9C329.7 246.3 330 248.3 331 250.1C332 252 333.8 253.8 334.2 256z"/>
+                <path d="M347.7 254.5C348.3 258.1 348.3 263.1 345.9 266.4C343.5 269.8 337.6 272.5 333.4 274.5C329.1 276.6 324.6 277.9 320.4 278.7C316.3 279.5 312.1 279.5 308.4 279.3C304.8 279.1 302.1 277.6 298.3 277.5C294.5 277.4 290.1 279.1 285.8 278.8C281.5 278.5 275.6 277.8 272.5 275.6C269.5 273.4 268.4 269.1 267.6 265.6C266.8 262.1 266.5 258.1 267.6 254.5C268.6 250.9 271.1 247 274 244.1C276.9 241.2 281.5 239.5 284.9 237.2C288.2 234.8 290.5 231.9 294.1 229.8C297.6 227.8 302.1 225.4 306.1 225C310.1 224.6 314.3 226.3 318 227.3C321.8 228.2 325.4 229 328.6 230.5C331.8 232.1 335 234 337.2 236.3C339.4 238.7 340.2 241.8 341.9 244.8C343.7 247.8 347 250.9 347.7 254.5z"/>
+                <path d="M361.5 252.9C362.5 258 362 265 358.6 269.7C355.1 274.3 346.9 278 341 280.9C335 283.7 328.8 285.7 323 286.8C317.2 287.9 311.4 287.8 306.2 287.5C301.1 287.2 297.4 285.2 292.1 285.1C286.8 285.1 280.3 287.6 274.4 287.1C268.5 286.6 260.6 285.4 256.5 282.2C252.4 279.1 251.1 273.2 249.9 268.3C248.7 263.4 248.1 257.9 249.5 252.9C250.9 248 254.4 242.6 258.3 238.5C262.2 234.5 268.4 232 273 228.5C277.6 225.1 280.8 220.7 285.8 217.9C290.8 215.1 297.3 212.2 302.9 211.7C308.5 211.3 314.3 214 319.4 215.3C324.6 216.7 329.6 217.8 334 219.9C338.4 222 342.6 224.7 345.8 228C348.9 231.3 350.2 235.3 352.8 239.5C355.4 243.6 360.6 247.9 361.5 252.9z"/>
+                <path d="M375.6 251.4C376.9 257.9 375.8 266.9 371.3 272.9C366.8 278.9 356.2 283.6 348.6 287.3C340.9 290.9 333 293.6 325.6 295C318.1 296.4 310.6 295.9 304 295.6C297.4 295.2 292.6 292.9 285.8 292.9C279 292.9 270.5 296.2 262.9 295.5C255.4 294.8 245.7 292.8 240.6 288.7C235.6 284.6 234 277.1 232.5 270.9C231 264.7 229.8 257.7 231.5 251.4C233.2 245.1 237.8 238.2 242.7 233C247.6 227.7 255.1 224.3 260.9 219.7C266.7 215.2 270.9 209.2 277.4 205.6C283.9 202.1 292.5 198.8 299.7 198.4C307 198.1 314.2 201.7 320.8 203.6C327.4 205.4 333.7 206.7 339.3 209.4C344.8 212.2 349.9 215.7 354 219.8C358.1 224 360.1 228.9 363.7 234.1C367.3 239.4 374.4 244.9 375.6 251.4z"/>
+                <path d="M390 249.9C391.5 257.8 389.6 268.9 384 276.2C378.3 283.4 365.5 289.1 356.2 293.6C346.9 298.2 337.3 301.6 328.2 303.3C319.1 305 309.9 304.1 301.8 303.7C293.6 303.3 287.9 300.7 279.5 300.8C271.1 300.8 260.4 305 251.3 304.1C242.3 303.1 231.1 300.1 225.1 295C219.1 289.9 217.4 280.9 215.5 273.4C213.6 265.9 211.8 257.5 213.7 249.9C215.7 242.2 221.3 233.9 227.1 227.4C232.9 220.9 241.6 216.5 248.6 210.7C255.5 205 260.8 197.3 268.7 193C276.7 188.7 287.7 185.3 296.6 185.1C305.5 184.9 314.1 189.6 322.1 191.9C330.1 194.3 337.8 195.8 344.4 199.1C351 202.5 356.9 206.9 361.9 211.9C367 216.8 369.9 222.5 374.6 228.8C379.3 235.1 388.4 242 390 249.9z"/>
+                <path d="M404.5 248.3C406.4 257.7 403.4 270.7 396.6 279.4C389.8 288 374.7 294.6 363.8 300C352.8 305.4 341.6 309.7 330.9 311.7C320.2 313.6 309.2 312.3 299.5 311.9C289.9 311.4 283 308.7 273 308.9C263 309 250.2 314 239.6 312.7C229.1 311.4 216.6 307.3 209.8 301.2C203 295 201.1 284.6 198.8 275.8C196.5 267 194 257.3 196.1 248.3C198.3 239.4 204.9 229.7 211.6 221.9C218.2 214.1 227.9 208.5 236 201.5C244 194.5 250.3 185 259.9 180C269.5 175.1 282.8 171.7 293.4 171.8C304 171.8 314 177.6 323.4 180.4C332.7 183.3 341.7 185 349.4 189C357.1 192.9 363.6 198.3 369.6 204.1C375.7 209.8 379.7 216.1 385.5 223.5C391.4 230.8 402.7 239 404.5 248.3z"/>
+                <path d="M419.2 246.8C421.3 257.6 417 272.6 409 282.5C401 292.4 383.9 300.1 371.4 306.4C358.8 312.6 345.9 317.8 333.6 320.1C321.2 322.4 308.5 320.5 297.3 320.1C286.1 319.6 278.1 317 266.5 317.3C254.9 317.5 239.8 323.2 227.8 321.5C215.9 319.8 202.4 314.3 194.9 307.1C187.3 299.9 185.2 288.2 182.5 278.1C179.8 268.1 176.5 257.1 178.7 246.8C181 236.5 188.7 225.5 196.1 216.4C203.5 207.3 213.9 200.4 223.1 192.1C232.2 183.8 239.7 172.3 250.9 166.7C262.1 161.1 278 158.1 290.2 158.5C302.5 158.8 313.9 165.6 324.6 169C335.3 172.4 345.6 174.4 354.3 179C363.1 183.5 370 189.9 377.1 196.4C384.1 202.9 389.6 209.7 396.6 218.1C403.6 226.5 417.1 236.1 419.2 246.8z"/>
+                <path d="M434 245.3C436.2 257.4 430.4 274.4 421.2 285.6C412.1 296.8 393.1 305.5 378.9 312.7C364.8 319.9 350.3 326 336.4 328.6C322.4 331.2 307.8 328.8 295.1 328.4C282.3 327.9 273 325.6 259.8 326C246.6 326.3 229.2 332.6 215.9 330.4C202.7 328.2 188.5 321.2 180.3 312.8C172.1 304.5 169.7 291.6 166.6 280.3C163.4 269 159.2 256.9 161.6 245.3C164 233.7 172.7 221.4 180.7 210.9C188.7 200.4 199.6 192 209.8 182.4C220 172.8 228.9 159.3 241.8 153.1C254.6 146.9 273.1 144.4 287.1 145.2C301.1 145.9 313.8 153.7 325.8 157.7C337.8 161.6 349.3 163.8 359.1 169C368.8 174.2 376.2 181.6 384.3 188.9C392.4 196.1 399.5 203.3 407.7 212.7C416 222.1 431.7 233.1 434 245.3z"/>
+                <path d="M448.7 243.8C451.1 257.3 443.6 276.1 433.2 288.6C422.9 301.2 402.2 311 386.5 319.1C370.8 327.2 354.8 334.2 339.2 337.2C323.5 340.1 307.2 337.2 292.9 336.8C278.5 336.5 267.9 334.6 253 335C238.2 335.4 218.5 342.2 204 339.4C189.5 336.6 174.9 327.8 166.1 318.3C157.2 308.8 154.5 294.8 150.9 282.4C147.4 270 142.3 256.6 144.7 243.8C147.1 230.9 156.7 217.3 165.3 205.4C173.9 193.5 185.1 183.5 196.3 172.5C207.5 161.4 217.9 146 232.5 139.2C247.1 132.5 268.2 130.8 283.9 131.9C299.7 133.1 313.7 141.8 327 146.4C340.3 150.9 353 153.4 363.8 159.2C374.5 165.1 382.2 173.4 391.4 181.4C400.6 189.4 409.5 196.9 419 207.2C428.6 217.6 446.4 230.2 448.7 243.8z"/>
+                <path d="M463.5 242.2C465.9 257.2 456.5 277.7 445 291.6C433.4 305.4 411.2 316.3 394.1 325.4C376.9 334.4 359.2 342.5 342 345.8C324.8 349.2 306.6 345.6 290.7 345.4C274.7 345.2 262.6 343.9 246.1 344.4C229.7 344.9 207.6 351.9 192 348.4C176.3 344.9 161.6 334.3 152.2 323.6C142.8 312.9 139.7 298 135.7 284.4C131.6 270.9 125.6 256.3 128 242.2C130.4 228.2 140.9 213.3 150 199.9C159.1 186.6 170.3 174.8 182.4 162.3C194.6 149.8 206.7 132.4 223 125.2C239.4 117.9 263.2 117.1 280.8 118.8C298.3 120.4 313.5 129.9 328.1 135.1C342.7 140.2 356.7 143 368.4 149.5C380.1 156 388 165.4 398.3 174.1C408.7 182.8 419.6 190.4 430.5 201.8C441.3 213.1 461 227.3 463.5 242.2z"/>
+                <path d="M478.1 240.7C480.5 257.1 469.1 279.2 456.4 294.4C443.6 309.6 420.2 321.7 401.6 331.7C383 341.7 363.7 350.8 344.9 354.6C326 358.3 306.1 354.3 288.5 354.2C270.8 354.2 257.1 353.7 239 354.3C220.9 354.8 196.6 361.7 179.9 357.5C163.2 353.2 148.6 340.5 138.7 328.7C128.9 316.8 125.2 301 120.7 286.3C116.2 271.7 109.3 256 111.7 240.7C114 225.4 125.3 209.3 134.7 194.5C144.1 179.7 155.1 165.8 168.3 151.9C181.4 138 195.3 118.6 213.5 110.9C231.8 103.2 258.3 103.5 277.6 105.7C296.9 107.8 313.4 118 329.3 123.7C345.2 129.4 360.3 132.7 372.9 139.9C385.6 147 393.6 157.4 405.2 166.8C416.7 176.2 429.9 183.9 442.1 196.2C454.2 208.6 475.7 224.3 478.1 240.7z"/>
+                <path d="M492.5 239.2C494.8 256.9 481.3 280.6 467.4 297.1C453.5 313.6 429.1 327 409.1 338C389.2 349.1 368.3 359.2 347.8 363.4C327.3 367.6 305.6 363.1 286.3 363.2C266.9 363.4 251.5 364 231.7 364.5C212 365.1 185.5 371.7 167.9 366.6C150.2 361.4 135.9 346.5 125.6 333.5C115.3 320.4 111.1 303.9 106.1 288.2C101 272.5 93.3 255.7 95.6 239.2C97.8 222.6 109.7 205.3 119.4 189C129.1 172.7 139.7 156.7 153.8 141.3C167.9 125.8 183.8 104.6 203.9 96.5C224 88.4 253.3 90 274.4 92.6C295.5 95.3 313.4 106.1 330.5 112.4C347.7 118.6 363.9 122.4 377.4 130.3C391 138.1 399.2 149.5 411.9 159.5C424.7 169.6 440.4 177.4 453.9 190.7C467.3 203.9 490.3 221.4 492.5 239.2z"/>
+                <path d="M506.7 237.6C508.7 256.8 493.1 282 478.1 299.7C463.1 317.5 437.9 332.2 416.6 344.3C395.4 356.4 372.8 367.5 350.8 372.3C328.7 377 305.2 372.1 284.1 372.6C263 373.1 245.7 374.7 224.3 375.3C202.9 375.8 174.4 381.8 155.8 375.6C137.2 369.4 123.6 352.4 112.9 338.1C102.2 323.8 97.2 306.7 91.7 289.9C86.1 273.2 77.7 255.4 79.7 237.6C81.8 219.9 94.2 201.4 104.1 183.6C114 165.7 124 147.3 139 130.4C154 113.4 172.2 90.4 194.3 82C216.3 73.5 248.4 76.5 271.3 79.7C294.2 82.8 313.3 94.1 331.8 100.9C350.2 107.7 367.4 112.2 381.9 120.7C396.4 129.3 404.7 141.5 418.7 152.3C432.7 163 451.2 170.8 465.8 185C480.5 199.3 504.6 218.5 506.7 237.6z"/>
+                <path d="M520.5 236.1C522.3 256.6 504.4 283.1 488.4 302.2C472.3 321.3 446.6 337.4 424.1 350.6C401.7 363.8 377.4 375.9 353.7 381.2C330 386.4 304.8 381.3 281.9 382.2C259.1 383 239.7 386 216.7 386.4C193.6 386.9 163.1 392 143.8 384.7C124.4 377.3 111.6 358 100.5 342.5C89.5 326.9 83.6 309.3 77.5 291.6C71.5 273.9 62.3 255 64.2 236.1C66.1 217.2 78.8 197.6 88.8 178.1C98.7 158.6 108 137.7 123.9 119.3C139.9 100.8 160.6 76.2 184.6 67.4C208.7 58.7 243.4 63.1 268.1 66.8C292.9 70.4 313.3 82 333 89.4C352.8 96.8 371 101.9 386.4 111.2C401.8 120.4 410.3 133.6 425.6 145C440.8 156.3 462.2 164.2 478 179.4C493.8 194.6 518.8 215.6 520.5 236.1z"/>
+                <path d="M534 234.6C535.3 256.4 515.3 284.2 498.2 304.6C481.2 325 455.2 342.6 431.6 356.9C408 371.1 382.1 384.3 356.8 390.2C331.5 396 304.4 390.8 279.8 392.1C255.1 393.4 233.5 397.8 208.8 398.1C184.2 398.3 151.9 402.2 131.8 393.7C111.7 385.1 99.8 363.4 88.5 346.6C77.1 329.9 70.2 311.9 63.6 293.2C57.1 274.6 47.4 254.7 49 234.6C50.6 214.5 63.4 193.7 73.4 172.6C83.3 151.5 91.7 128 108.6 108C125.6 88.1 148.9 61.9 175 52.9C201 43.9 238.4 49.8 265 54C291.6 58.1 313.4 69.7 334.4 77.7C355.4 85.6 374.5 91.6 390.9 101.6C407.2 111.6 415.9 125.6 432.5 137.6C449.1 149.6 473.4 157.5 490.3 173.6C507.2 189.8 532.7 212.8 534 234.6z"/>
+              </g>
+              <path class="map-route-base" d="M95 415 201 307h66l45-49 112-112h43"/>
+              <path class="map-route" pathLength="1" d="M95 415 201 307h66l45-49 112-112h43"/>
+              <circle class="map-node" cx="95" cy="415" r="5"/>
+              <circle class="map-node" cx="467" cy="146" r="5"/>
+              <circle class="map-signal" r="4.5"/>
+              <g class="map-origin">
+                <circle cx="312" cy="258" r="19"/>
+                <circle cx="312" cy="258" r="9"/>
+                <circle cx="312" cy="258" r="3.5"/>
+              </g>
+            </svg>
+            <figcaption><span>Lleida</span><span>41°37′ N &nbsp; 0°37′ E</span></figcaption>
+          </figure>
+          <!-- visual-only:end -->
+          <div class="story-copy" data-reveal>
+            <p>Me llamo <strong>David López Borrego</strong>. Estoy cursando 2.º de Bachillerato en el Colegio Claver de Lleida.</p>
+            <p>Este es el lugar donde iré compartiendo mis proyectos, los caminos que elija y lo que aprenda por el camino.</p>
+            <a class="chapter-link" href="#trayectoria">Explorar mi trayectoria <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter projects" id="proyectos" aria-labelledby="projects-title">
+        <div class="chapter-inner">
+          <header class="section-heading">
+            <h2 id="projects-title" class="chapter-title" data-reveal>Proyectos</h2>
+            <p data-reveal>Un simulador de circuitos digitales y una colección de herramientas web.</p>
+          </header>
+          <div class="project-rail">
+            <div class="project-steps">
+              <article class="project-step" aria-labelledby="dalogic-title">
+                <div class="project-copy">
+                  <p class="project-kind" data-reveal>Proyecto personal · Colegio Claver</p>
+                  <h3 id="dalogic-title" tabindex="-1" data-reveal>DaLogic</h3>
+                  <p data-reveal>Un editor gráfico de circuitos lógicos digitales para diseñar y simular circuitos, obtener tablas de verdad y guardar circuitos integrados reutilizables.</p>
+                  <p class="project-tech" data-reveal>Python · PySide6 · 2.º de Bachillerato</p>
+                  <div class="chapter-actions project-actions" data-reveal>
+                    <a class="chapter-link" href="https://davidlb025.github.io/DaLogic_light/" data-console-link="dalogic">Abrir DaLogic light <span aria-hidden="true">↗</span></a>
+                    <a class="chapter-link" href="https://github.com/davidlb025/DaLogic" data-console-link="repositorio">Repositorio <span aria-hidden="true">↗</span></a>
+                    <!-- visual-only:start -->
+                    <button class="chapter-link circuit-jump" type="button" aria-controls="circuito-dalogic">Probar circuito <span aria-hidden="true">→</span></button>
+                    <!-- visual-only:end -->
+                  </div>
+                </div>
+                <!-- visual-only:start -->
+                <div class="project-figure project-figure--circuit" id="circuito-dalogic">
+                  <div class="circuit-demo" data-input-a="1" data-input-b="0" data-output="0">
+                    <div class="circuit-demo__caption">
+                      <span>Puerta AND</span>
+                      <span class="circuit-demo__instruction">Activa o desactiva A y B</span>
+                    </div>
+
+                    <svg class="circuit-demo__diagram" viewBox="0 0 480 284" role="img"
+                         aria-label="Esquema de una puerta AND. La salida vale uno cuando ambas entradas valen uno.">
+                      <g class="circuit-demo__construction" fill="none" aria-hidden="true">
+                        <path d="M4 28V6h22m428 0h22v22M4 256v22h22m428 0h22v-22"/>
+                        <circle cx="242" cy="142" r="118" stroke-dasharray="2 6"/>
+                        <path d="M242 11v17m0 228v17m130-131h17"/>
+                      </g>
+                      <g class="circuit-demo__gate" aria-hidden="true">
+                        <path d="M176 48h69a94 94 0 0 1 0 188h-69z"/>
+                        <text x="253" y="154" text-anchor="middle">AND</text>
+                      </g>
+
+                      <g class="circuit-demo__wire circuit-demo__wire--a" aria-hidden="true">
+                        <path class="circuit-demo__trace" d="M32 64h67l26 22h51"/>
+                        <path class="circuit-demo__packet" pathLength="100" d="M32 64h67l26 22h51"/>
+                        <circle class="circuit-demo__terminal" cx="32" cy="64" r="6"/>
+                        <circle class="circuit-demo__pin" cx="176" cy="86" r="3.5"/>
+                        <text class="circuit-demo__port-name" x="33" y="40" text-anchor="middle">A</text>
+                      </g>
+                      <g class="circuit-demo__wire circuit-demo__wire--b" aria-hidden="true">
+                        <path class="circuit-demo__trace" d="M32 220h67l26-22h51"/>
+                        <path class="circuit-demo__packet" pathLength="100" d="M32 220h67l26-22h51"/>
+                        <circle class="circuit-demo__terminal" cx="32" cy="220" r="6"/>
+                        <circle class="circuit-demo__pin" cx="176" cy="198" r="3.5"/>
+                        <text class="circuit-demo__port-name" x="33" y="267" text-anchor="middle">B</text>
+                      </g>
+                      <g class="circuit-demo__wire circuit-demo__wire--output" aria-hidden="true">
+                        <path class="circuit-demo__trace" d="M339 142h109"/>
+                        <path class="circuit-demo__packet" pathLength="100" d="M339 142h109"/>
+                        <circle class="circuit-demo__terminal" cx="448" cy="142" r="6"/>
+                        <circle class="circuit-demo__pin" cx="339" cy="142" r="3.5"/>
+                        <text class="circuit-demo__port-name" x="448" y="112" text-anchor="middle">Y</text>
+                      </g>
+                    </svg>
+
+                    <div class="circuit-demo__states" role="group" aria-label="Entradas y salida de la puerta AND">
+                      <button class="circuit-demo__state" type="button" data-circuit-input="a" aria-pressed="true" disabled>
+                        <span>Entrada A</span><strong aria-hidden="true">1</strong>
+                      </button>
+                      <button class="circuit-demo__state" type="button" data-circuit-input="b" aria-pressed="false" disabled>
+                        <span>Entrada B</span><strong aria-hidden="true">0</strong>
+                      </button>
+                      <output class="circuit-demo__state circuit-demo__result" aria-live="polite" aria-atomic="true">
+                        <span>Salida Y</span><strong>0</strong>
+                      </output>
+                    </div>
+                  </div>
+                </div>
+                <!-- visual-only:end -->
+                <!-- TEXT-AND -->
+              </article>
+              <!-- visual-only:start -->
+              <div class="project-viewer" hidden></div>
+              <!-- visual-only:end -->
+
+              <article class="project-step" aria-labelledby="toolbox-title">
+                <div class="project-copy">
+                  <p class="project-kind" data-reveal>Colección</p>
+                  <h3 id="toolbox-title" tabindex="-1" data-reveal>Caja de<br class="desktop-break"> Herramientas</h3>
+                  <p data-reveal>Pequeñas aplicaciones web para resolver cosas concretas.</p>
+                  <a class="chapter-link project-cta" href="https://davidlb025.github.io/herramientas/" data-console-link="herramientas" data-reveal>Abrir la caja <span aria-hidden="true">↗</span></a>
+                </div>
+                <!-- visual-only:start -->
+                <div class="project-figure project-figure--tools" aria-hidden="true">
+                  <div class="tool-board">
+                    <div class="tool-tile">
+                      <svg viewBox="0 0 120 100" fill="none"><path d="M60 18v64M28 50h64M38 28l44 44m0-44L38 72"/><circle cx="60" cy="50" r="24"/><circle cx="60" cy="50" r="7"/></svg>
+                    </div>
+                    <div class="tool-tile">
+                      <svg viewBox="0 0 120 100" fill="none"><path d="M24 72h72M24 56h72M24 40h72M24 24h72"/><path class="tool-accent" d="M24 65h18l13-26 12 14 10-23h19"/></svg>
+                    </div>
+                    <div class="tool-tile">
+                      <svg viewBox="0 0 120 100" fill="none"><path d="M23 50 60 27l37 23-37 23zM23 60l37 23 37-23M23 40l37-23 37 23"/></svg>
+                    </div>
+                    <div class="tool-tile">
+                      <svg viewBox="0 0 120 100" fill="none"><path d="M24 50h72M60 19v62"/><circle cx="60" cy="50" r="29"/><path class="tool-accent" d="M60 21a29 29 0 0 1 29 29H60z"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- visual-only:end -->
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter journey" id="trayectoria" aria-labelledby="journey-title">
+        <div class="chapter-inner journey-layout">
+          <header class="journey-head">
+            <h2 id="journey-title" class="chapter-title" data-reveal>Trayectoria</h2>
+          </header>
+          <div class="journey-prism">
+            <!-- visual-only:start -->
+            <div class="prism-tabs" data-prism-tabs aria-label="Apartados de Trayectoria" hidden>
+              <button id="prism-tab-studies" type="button" data-prism-tab="0" aria-controls="prism-studies">Estudios</button>
+              <button id="prism-tab-work" type="button" data-prism-tab="1" aria-controls="prism-work">Trabajo</button>
+              <button id="prism-tab-volunteering" type="button" data-prism-tab="2" aria-controls="prism-volunteering">Voluntariado</button>
+            </div>
+            <!-- visual-only:end -->
+            <div class="prism-scene">
+              <div class="prism-rotor" data-prism-rotor>
+                <div class="prism-cap prism-cap--top" aria-hidden="true"></div>
+                <div class="prism-cap prism-cap--bottom" aria-hidden="true"></div>
+                <section class="prism-face" id="prism-studies" data-prism-face="0" aria-labelledby="studies-title">
+                  <h3 id="studies-title">Estudios</h3>
+                  <div class="prism-entry">
+                    <p class="project-kind">En curso</p>
+                    <h4>2.º de Bachillerato</h4>
+                    <p>Colegio Claver de Lleida.</p>
+                  </div>
+                </section>
+                <section class="prism-face" id="prism-work" data-prism-face="1" aria-labelledby="work-title">
+                  <h3 id="work-title">Trabajo</h3>
+                  <p class="prism-entry">Esperando el momento.</p>
+                </section>
+                <section class="prism-face" id="prism-volunteering" data-prism-face="2" aria-labelledby="volunteering-title">
+                  <h3 id="volunteering-title">Voluntariado</h3>
+                  <ul class="prism-list" role="list">
+                    <li class="prism-entry">
+                      <p class="project-kind">2026–2027</p>
+                      <h4>Profesor de repaso en primaria</h4>
+                      <a class="chapter-link" href="https://agora.xtec.cat/escolaciutatjardi/" data-console-link="escola">Escola Ciutat Jardí · Lleida <span aria-hidden="true">↗</span></a>
+                      <p>Apoyo escolar y clases de repaso para alumnado de educación primaria.</p>
+                    </li>
+                    <li class="prism-entry">
+                      <p class="project-kind">2025–2026</p>
+                      <h4>Ayudante en Moda re-</h4>
+                      <a class="chapter-link" href="https://modare.org/tiendas-ropa-segunda-mano/lleida/" data-console-link="troballes">Troballes · Lleida Anselm Clavé <span aria-hidden="true">↗</span></a>
+                      <p>Voluntariado como ayudante en la tienda de Moda re- de Troballes, en el carrer de l’Anselm Clavé de Lleida.</p>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter credentials" id="certificados" aria-labelledby="credentials-title">
+        <div class="chapter-inner credentials-layout">
+          <h2 id="credentials-title" class="chapter-title" data-reveal>Certificados</h2>
+          <ul class="certificate-list" role="list">
+            <li class="certificate-row" data-reveal>
+              <h3>Inglés</h3>
+              <span class="certificate-level">Nivel B2</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="chapter contact" id="contacto" aria-labelledby="contact-title">
+        <div class="chapter-inner contact-layout">
+          <div class="contact-copy">
+            <h2 id="contact-title" class="chapter-title" data-reveal>Contacto</h2>
+            <p class="contact-lead" data-reveal>¿Creamos el<br> siguiente capítulo?</p>
+            <div class="chapter-actions" data-reveal>
+              <a class="chapter-link" href="mailto:davidlopezborrego025@gmail.com" data-console-link="correo">davidlopezborrego025@<wbr>gmail.com <span aria-hidden="true">↗</span></a>
+              <a class="chapter-link" href="tel:+34683371901" data-console-link="telefono">+34 683 371 901 <span aria-hidden="true">↗</span></a>
+              <a class="chapter-link" href="https://www.linkedin.com/in/davidlb025/">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <!-- visual-only:start -->
+          <svg class="contact-signal" viewBox="0 0 540 540" aria-hidden="true" fill="none">
+            <g class="contact-rings"><circle cx="270" cy="270" r="68"/><circle cx="270" cy="270" r="101"/><circle cx="270" cy="270" r="134"/><circle cx="270" cy="270" r="167"/><circle cx="270" cy="270" r="200"/><circle cx="270" cy="270" r="233"/><circle cx="270" cy="270" r="266"/></g>
+            <path class="contact-sweep" d="M270 270V4a266 266 0 0 1 116 27Z"/>
+            <path d="M270 270 458 82h73M270 270H70L24 316" stroke="currentColor"/>
+            <circle cx="270" cy="270" r="11" fill="currentColor"/>
+            <circle cx="458" cy="82" r="5" fill="currentColor"/>
+            <circle cx="70" cy="270" r="5" fill="currentColor"/>
+          </svg>
+          <!-- visual-only:end -->
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="chapter-inner portfolio-footer">
+    <span>David López Borrego</span>
+    <div class="chapter-actions">
+      <a class="chapter-link" href="https://github.com/davidlb025" data-console-link="github">GitHub <span aria-hidden="true">↗</span></a>
+      <!-- visual-only:start -->
+      <noscript><a class="chapter-link" href="./texto.html">Versión de solo texto</a></noscript>
+      <!-- visual-only:end -->
+      <a class="chapter-link" href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+  <script>/* SCENE */</script>
+</body>
+</html>

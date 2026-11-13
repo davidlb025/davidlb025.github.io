@@ -1,0 +1,33 @@
+<div class="console-frame">
+  <header class="console-header">
+    <div class="console-sr-only"><h1 id="console-title">Consola del portfolio</h1></div>
+    <span class="console-header-label" aria-hidden="true">Consola del portfolio</span>
+    <a class="console-exit-hint" href="./index.html#origen" aria-label="Volver al portfolio" aria-keyshortcuts="Escape">Volver <kbd aria-hidden="true">[Esc]</kbd></a>
+  </header>
+  <div class="console-content">
+    <section class="console-boot" aria-labelledby="console-boot-title">
+      <h2 class="console-boot-title" id="console-boot-title">Selecciona un sistema</h2>
+      <ul class="console-choices" role="list">
+        <li class="console-choice" data-console-option="windows" data-selected aria-current="true">1. Windows</li>
+        <li class="console-choice" data-console-option="linux">2. Linux</li>
+      </ul>
+      <p class="console-instructions" id="console-boot-instructions">← → e Intro, o escribe 1 o 2.</p>
+      <p class="console-sr-only" data-console-selection role="status" aria-live="polite"></p>
+      <p class="console-boot-error" data-console-error role="alert" hidden></p>
+      <div class="console-line"><span class="console-prompt" aria-hidden="true">&gt; </span><span class="console-input" contenteditable="plaintext-only" role="textbox" tabindex="0" aria-label="Selección" aria-describedby="console-boot-instructions" inputmode="text" enterkeyhint="go" autocapitalize="off" spellcheck="false"></span></div>
+    </section>
+    <section class="console-shell" aria-label="Sesión de consola" hidden>
+      <div class="console-log" role="log" aria-label="Salida de la consola" aria-live="polite" tabindex="0"></div>
+      <div class="console-line"><span class="console-prompt" id="console-current-prompt"></span><span class="console-input" contenteditable="plaintext-only" role="textbox" tabindex="0" aria-label="Comando" aria-describedby="console-current-prompt" inputmode="text" enterkeyhint="go" autocapitalize="off" spellcheck="false"></span></div>
+    </section>
+    <section class="console-game" hidden>
+      <div class="console-game-terminal" role="application" tabindex="0" aria-labelledby="console-game-title" aria-describedby="console-game-controls">
+        <h2 id="console-game-title" class="console-game-title"></h2>
+        <p class="console-game-status"></p>
+        <pre class="console-game-board" aria-hidden="true"></pre>
+        <p id="console-game-controls" class="console-game-controls"><span data-game-keys></span><br>P Pausa · R Reiniciar · Q o Esc Volver</p>
+        <p class="console-sr-only" data-game-announcement role="status"></p>
+      </div>
+    </section>
+  </div>
+</div>
