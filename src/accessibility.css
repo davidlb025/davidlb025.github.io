@@ -401,7 +401,7 @@
   text-shadow: none;
   overflow-wrap: anywhere;
 }
-[data-high-contrast] :is(.controls, .vignette, .portal-light, .content-down, .identity__orbit, .portfolio-atmosphere, .story-map, .project-figure--tools, .contact-signal),
+[data-high-contrast] :is(.controls, .vignette, .portal-light, .content-down, .identity__orbit, .portfolio-atmosphere, .story-map, .project-figure--tools, .project-figure--postal, .contact-signal),
 [data-high-contrast] .identity__content::before,
 [data-high-contrast] .prism-face::before,
 [data-high-contrast] .prism-face::after { display: none; }

@@ -67,6 +67,7 @@ export function createConsoleData(source) {
 
   const dalogicLinks = ["dalogic", "repositorio"];
   const toolLinks = ["herramientas"];
+  const postalLinks = ["salto-postal", "codigo-salto-postal"];
   const volunteerLinks = ["escola", "troballes"];
   const contactLinks = ["correo", "telefono", "linkedin", "github"];
   const tree = directory({
@@ -85,7 +86,11 @@ export function createConsoleData(source) {
         "caja-de-herramientas.txt": file(...read('[aria-labelledby="toolbox-title"] .project-copy')),
         "enlaces.txt": file(linkLines(toolLinks)),
       }, toolLinks),
-    }, [...dalogicLinks, ...toolLinks]),
+      "salto-postal": directory({
+        "salto-postal.txt": file(...read('[aria-labelledby="salto-postal-title"] .project-copy')),
+        "enlaces.txt": file(linkLines(postalLinks)),
+      }, postalLinks),
+    }, [...dalogicLinks, ...toolLinks, ...postalLinks]),
     trayectoria: directory({
       estudios: directory({ "formacion.txt": file(...read("#prism-studies")) }),
       trabajo: directory({ "disponibilidad.txt": file(...read("#prism-work")) }),

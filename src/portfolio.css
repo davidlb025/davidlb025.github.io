@@ -347,6 +347,99 @@
 }
 [data-content-motion] .project-figure[data-in-view] .tool-tile:nth-child(2n) { animation-delay: 120ms; }
 
+.postal-parcel {
+  --parcel-front: 46%;
+  --parcel-depth: 37%;
+  --parcel-left: 8%;
+  --parcel-top: 34%;
+  --parcel-tape: color-mix(in srgb, var(--signal) 19%, var(--prism-near));
+  position: relative;
+  inline-size: min(72%, 25rem);
+  aspect-ratio: 5 / 4;
+  filter: drop-shadow(0 14px 15px color-mix(in srgb, var(--prism-far) 45%, transparent));
+}
+.postal-parcel__face {
+  position: absolute;
+  inset-block-start: var(--parcel-top);
+  inset-inline-start: var(--parcel-left);
+  inline-size: var(--parcel-front);
+  block-size: 31%;
+  border: 1px solid var(--prism-rim);
+  transform-origin: 0 0;
+}
+/* Each horizontal face edge projects at a slope of 1/2. The frame is 5:4. */
+.postal-parcel__face--side {
+  inset-block-start: calc(var(--parcel-top) + var(--parcel-front) * .625);
+  inset-inline-start: calc(var(--parcel-left) + var(--parcel-front));
+  inline-size: var(--parcel-depth);
+  transform: skewY(-26.565deg);
+  background: var(--prism-far);
+}
+.postal-parcel__face--front {
+  transform: skewY(26.565deg);
+  background: var(--project-surface-raised);
+}
+.postal-parcel__face--top {
+  block-size: calc(var(--parcel-depth) * 1.25);
+  transform: matrix(1, .5, 1, -.5, 0, 0);
+  background: var(--prism-near);
+}
+.postal-parcel__face--front::before, .postal-parcel__face--top::before {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 45%;
+  inline-size: 13%;
+  border-inline: 1px solid var(--signal-line);
+  background: var(--parcel-tape);
+  content: "";
+}
+.postal-parcel__face--front::before {
+  inset-block-end: 47%;
+  border-block-end: 1px solid var(--signal-line);
+}
+.postal-parcel__label {
+  position: absolute;
+  inset-inline-start: 10%;
+  inset-block-end: 17%;
+  inline-size: 30%;
+  block-size: 48%;
+  border: 1px solid var(--prism-rim);
+  background: var(--project-surface);
+}
+.postal-parcel__label::before, .postal-parcel__label::after {
+  position: absolute;
+  inset-inline-start: 16%;
+  inset-block-start: 24%;
+  inline-size: 46%;
+  block-size: 1px;
+  background: currentColor;
+  content: "";
+}
+.postal-parcel__label::after {
+  inset-block-start: 46%;
+  inline-size: 69%;
+  block-size: 33%;
+  background: repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 3px, currentColor 3px 5px, transparent 5px 7px);
+}
+.postal-parcel__mark {
+  position: absolute;
+  inset-inline-end: 15%;
+  inset-block-end: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  inline-size: 28%;
+  block-size: 44%;
+  border: 1px solid var(--signal-line);
+}
+.postal-parcel__mark::before, .postal-parcel__mark::after {
+  inline-size: 23%;
+  block-size: 54%;
+  background: var(--prism-rim);
+  clip-path: polygon(50% 0, 100% 40%, 67% 40%, 67% 100%, 33% 100%, 33% 40%, 0 40%);
+  content: "";
+}
+
 .journey-layout {
   padding-block: clamp(51px, 4.8vw, 76px);
   text-align: center;
