@@ -68,12 +68,29 @@ if (new URLSearchParams(location.search).get("carga") === "1") {
 }
 </script>`;
 
+const reducedMotionRedirect = `<script>
+(() => {
+  const preference = matchMedia("(prefers-reduced-motion: reduce)");
+  function redirect() {
+    if (!preference.matches) return;
+    const url = new URL("./prerender.html", location.href);
+    url.search = location.search;
+    url.searchParams.delete("animacion");
+    url.hash = location.hash;
+    location.replace(url.href);
+  }
+  preference.addEventListener("change", redirect);
+  redirect();
+})();
+</script>`;
+
 function makeVisualPage({ highContrast = false, recorded = false } = {}) {
   let source = highContrast ? template
     .replace(' data-theme="noche"', ' data-high-contrast')
     .replace('content="#080e28"', 'content="#000000"')
     .replace("<title>David López Borrego</title>", "<title>David López Borrego · Alto contraste</title>")
     .replace(/<!-- console-launch:start -->[\s\S]*?<!-- console-launch:end -->/, "") : template;
+  if (!highContrast && !recorded) source = source.replace("</head>", `${reducedMotionRedirect}\n</head>`);
   if (recorded) {
     source = source
       .replace(' data-theme="noche"', ' data-theme="noche" data-prerender')

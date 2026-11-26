@@ -223,6 +223,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
+<script>
+(() => {
+  const preference = matchMedia("(prefers-reduced-motion: reduce)");
+  function redirect() {
+    if (!preference.matches) return;
+    const url = new URL("./prerender.html", location.href);
+    url.search = location.search;
+    url.searchParams.delete("animacion");
+    url.hash = location.hash;
+    location.replace(url.href);
+  }
+  preference.addEventListener("change", redirect);
+  redirect();
+})();
+</script>
 </head>
 <body>
   <nav class="language-switcher" aria-label="Idioma"><a lang="es" hreflang="es" href="../index.html" data-keep-section>Español</a><a lang="ca" hreflang="ca" href="../ca/index.html" aria-current="page" data-keep-section>Català</a><a lang="en" hreflang="en" href="../en/index.html" data-keep-section>English</a></nav><script>
